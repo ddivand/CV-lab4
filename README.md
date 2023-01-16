@@ -23,4 +23,4 @@
 
 ## CV.ipynb
 
-Здесь содерживаться код, который использовался для обучения модели классификации изображений. Использованный датасет - [изображения мобильных телефонов](https://www.kaggle.com/datasets/lasaljaywardena/mobile-smartphone-images-dataset). Использованная платформа - [Google Colab](https://colab.research.google.com/).
+Здесь содерживаться код, который использовался для обучения модели классификации изображений. Использованный датасет - [изображения мобильных телефонов](https://www.kaggle.com/datasets/lasaljaywardena/mobile-smartphone-images-dataset). Использованная платформа - [Google Colab](https://colab.research.google.com/). Итоговая модель - [гугл диск](https://drive.google.com/drive/folders/17InkMZNjatF9eoen8AKFun62dSxfwt4Q?usp=share_link).
