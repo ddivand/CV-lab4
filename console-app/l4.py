@@ -13,7 +13,7 @@ parser = argparse.ArgumentParser(description="Locate objects in a live camera st
 
 parser.add_argument("input_URI", type=str, default="", nargs='?', help="URI of the input stream")
 parser.add_argument("output_URI", type=str, default="", nargs='?', help="URI of the output stream")
-parser.add_argument("--detection_network", type=str, default="ssd-mobiledetection_net-v2", help="pre-trained model to load (see below for options)")
+parser.add_argument("--detection_network", type=str, default="ssd-mobiledetection_net-v2", help="pre-trained model to load")
 parser.add_argument("--threshold", type=float, default=0.5, help="minimum detection threshold to use") 
 
 try:
@@ -31,7 +31,7 @@ test_output = jetson.utils.videoOutput("test_output.jpg", argv=sys.argv)
 
 # load the object detection detection_network
 detection_net = jetson.inference.detectNet(opt.detection_network, sys.argv, opt.threshold)
-classifier = pipeline("image-classification", model="/home/nano7/l4/checkpoint", device = 0)
+classifier = pipeline("image-classification", model="_insert_path_to_your_model_here_", device = 0)
 
 # create utils
 font = jetson.utils.cudaFont()

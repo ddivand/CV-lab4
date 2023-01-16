@@ -19,7 +19,7 @@ detection_net = jetson.inference.detectNet("ssd-mobiledetection_net-v2", sys.arg
 print("Detect net load time: {}".format(time.time() - detect_net_load_time_start))
 
 image_net_load_time_start = time.time()
-classifier = pipeline("image-classification", model="/home/nano7/l4/checkpoint", device = 0)
+classifier = pipeline("image-classification", model="_insert_path_to_your_model_here_", device = 0)
 print("Image net load time: {}".format(time.time() - image_net_load_time_start))
 
 # create utils
@@ -103,11 +103,11 @@ i = 0;
 j = 0;
 
 while True:
-	for filename in os.listdir('./images/'):
+	for filename in os.listdir('_images_dir_path_here_'):
 		print(filename)
 
 		exe_time_start = time.time()
-		_, classify_time, detect_time = AnalyzeImage(Image.open('/home/nano7/l4/images/'+filename))
+		_, classify_time, detect_time = AnalyzeImage(Image.open('_images_dir_path_here_'+filename))
 		exec_time = time.time() - exe_time_start
 		other_time = exec_time - (classify_time + detect_time)
 
